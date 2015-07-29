@@ -4,6 +4,8 @@
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 CURRENT_DIR=`pwd`
+YCM_DIR = $CURRENT_DIR/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm
+YCM_CONF_FILE_NAME = ycm_extra_conf
 
 lnif() {
     if [ -e "$1" ]; then
@@ -42,6 +44,11 @@ then
     bash -x install.sh --clang-completer --system-libclang   # use system clang
 else
     bash -x install.sh --clang-completer
+fi
+
+if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
+    mv $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py\.bak
+    ln $CURRENT_DIR/others/_ycm_extra_conf.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py
 fi
 
 echo "Install Done!"
