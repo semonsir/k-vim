@@ -348,3 +348,63 @@ Github: https://github.com/wklken
 Blog: [http://www.wklken.me](http://www.wklken.me)
 
 2013-06-11 于深圳
+
+------------------------
+------------------------
+
+
+Modify By LittleKey
+===================
+
+
+### 缩进设置
+ 
+    default 默认(所有文件)使用四个空格缩进
+    ruby    使用两个空格缩进
+    vimrc   使用两个空格缩进
+    python  使用四个空格缩进
+ 
+## 自定义快捷键
+ 
+> F1~F6 的设置请查看上面的介绍,或直接阅读vimrc
+ 
+> \<Leader\> 映射为','逗号
+ 
+    F7  切换Tab与Space模式, 具体操作会参照当时的Tab相关设置(Default: 'Space mode')
+    F9  TagBar开关
+    F10 运行脚本(目前支持python与ruby)
+    <Leader>gs gitgutter开关 (default: on)
+    as<Space> 全文替换
+    cs<Space> 当前行替换
+    ns<Space> 后续所有行替换
+    <Leader>r 交互式替换，被选中文本
+ 
+    H 跳到行首
+    L 跳到行尾
+ 
+## 插件
+ 
+   具体分类请参照vimrc.bundles
+ 
+### add plugin
+ 
+> 杂项
+
+1. #### [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+ 
+   在gutter (sign column)上显示git的diff
+ 
+   在wklken的配置中已添加, 所以去掉这个...不过保持默认打开
+ 
+> 语言支持                                                                                                                      
+ 
+2. #### [Valloric/MatchTagAlways](https://github.com/Valloric/MatchTagAlways)
+ 
+   高亮html/xml等文件的tag
+ 
+> 功能增强
+
+3. #### [hwrod/interactive](https://github.com/hwrod/interactive-replace)
+ 
+   提供交互式的文本替换，使用Enter跳过一次替换，使用Ctrl-c 结束.
+ 
