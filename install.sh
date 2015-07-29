@@ -51,4 +51,9 @@ if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
     ln $CURRENT_DIR/others/_ycm_extra_conf.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py
 fi
 
+if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
+    mv $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py\.bak
+    ln $CURRENT_DIR/others/_ycm_extra_conf.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py
+fi
+
 echo "Install Done!"
