@@ -590,8 +590,8 @@ call plug#end()
     " 同git diff,实时展示文件中修改的行
     " 只是不喜欢除了行号多一列, 默认关闭,gs时打开
     let g:gitgutter_map_keys = 0
-let g:gitgutter_enabled = 1
-let g:gitgutter_highlight_lines = 0
+    let g:gitgutter_enabled = 1
+    let g:gitgutter_highlight_lines = 0
     nnoremap <leader>gs :GitGutterToggle<CR>
 " }}}
 
@@ -658,6 +658,11 @@ let g:indentLine_noConcealCursor = 1
 let g:indentLine_color_term = 0
 let g:indentLine_char = '¦'
 
+" 代码排版缩进标识
+Bundle 'Yggdroot/indentLine'
+let g:indentLine_noConcealCursor = 1
+let g:indentLine_color_term = 0
+let g:indentLine_char = '¦'
 
 " ################### 显示增强-主题 ###################"
 
