@@ -375,8 +375,6 @@ Modify By LittleKey
 
 > \<Leader\> 映射为','逗号
 
-=======
-
 ### 缩进设置
 
     default               默认(所有文件)使用四个空格缩进
@@ -421,29 +419,3 @@ Modify By LittleKey
 3. #### [hwrod/interactive](https://github.com/hwrod/interactive-replace)
 
    提供交互式的文本替换，使用Enter跳过一次替换，使用Ctrl-c 结束.
-=======
-
-    H 跳到行首
-    L 跳到行尾
-
-## 插件
-
-   具体分类请参照vimrc.bundles
-
-### add plugin
-
-1. #### [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-
-   在gutter (sign column)上显示git的diff
-
-   在wklken的配置中已添加, 所以去掉这个...不过保持默认打开
-
-2. #### [Valloric/MatchTagAlways](https://github.com/Valloric/MatchTagAlways)
-
-   高亮html/xml等文件的tag
-
-3. #### [hwrod/interactive](https://github.com/hwrod/interactive-replace)
-
-   提供交互式的文本替换，使用Enter跳过一次替换，使用Ctrl-c 结束.
-
-=======
