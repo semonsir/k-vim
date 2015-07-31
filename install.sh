@@ -33,22 +33,36 @@ vim -u $HOME/.vimrc.bundles +PlugInstall! +PlugClean! +qall
 export SHELL=$system_shell
 
 
-echo "Step4: compile YouCompleteMe"
-echo "It will take a long time, just be patient!"
-echo "If error,you need to compile it yourself"
-echo "cd $CURRENT_DIR/bundle/YouCompleteMe/ && python install.py --clang-completer"
-cd $CURRENT_DIR/bundle/YouCompleteMe/
-git submodule update --init --recursive
-if [ `which clang` ]   # check system clang
+if [ $1 != "--dont-compile-ycm" ];
 then
+    echo "Step5: compile YouCompleteMe"
+    echo "It will take a long time, just be patient!"
+    echo "If error,you need to compile it yourself"
+echo "cd $CURRENT_DIR/bundle/YouCompleteMe/ && python install.py --clang-completer"
+    cd $CURRENT_DIR/bundle/YouCompleteMe/
+git submodule update --init --recursive
+    if [ `which clang` ]   # check system clang
+    then
     python install.py --clang-completer --system-libclang   # use system clang
-else
+    else
     python install.py --clang-completer
+    fi
+
+    if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
+        mv $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py\.bak
+        ln $CURRENT_DIR/others/_ycm_extra_conf.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py
+    fi
 fi
 
-if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
-    mv $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py\.bak
-    ln $CURRENT_DIR/others/_ycm_extra_conf.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py
+#vim bk and undo dir
+if [ ! -d /tmp/vimbk ]
+then
+    mkdir -p /tmp/vimbk
+fi
+
+if [ ! -d /tmp/vimundo ]
+then
+    mkdir -p /tmp/vimundo
 fi
 
 echo "Install Done!"

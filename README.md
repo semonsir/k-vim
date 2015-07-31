@@ -362,6 +362,9 @@ Blog: [http://www.wklken.me](http://www.wklken.me)
 Modify By LittleKey
 ===================
 
+添加安装参数
+
+   `--dont-compile-ycm` 在执行install脚本时，附加此参数后将不执行YCM的编译于配置操作
 
 ### 缩进设置
 
