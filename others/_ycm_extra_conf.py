@@ -12,12 +12,6 @@ compilation_database_folder = ''
 # These are the compilation flags that will be used in case there's no
 # compilation database set.
 
-# fix qt5_Dir value to qt5's dir
-#qt5_Dir = '/usr/include/qt5'
-#qt5_Flag = '-I' + qt5_Dir
-#qt5_Flags_List = [ os.path.join(qt5_Flag, apple) for apple in os.listdir(qt5_Dir) ]
-#qt5_Flags_List += ['-isystem', '/usr/include/qt5']
-
 flags = [
     '-Wall',
     '-std=c++11',
@@ -29,19 +23,8 @@ flags = [
     '-isystem',
     '../llvm/include',
     '-isystem',
-    '/usr/include',
-    '-isystem',
-    '/usr/local/include/SDL2',
-    '/Library/Frameworks/SDL2_image.framework/Versions/A/Headers',
-    #'-isystem',
-    #'/usr/lib/gcc/i586-linux-gnu'
-    '-isystem',
-    '/usr/include',
-    '-isystem',
-    '/home/littlekey/android-ndk-r10d/sources/cxx-stl/system/include',
-    '-isystem',
-    '/home/littlekey/android-ndk-r10d/sources/android/support/include'
-    ]
+    '/usr/include'
+]
 
 if compilation_database_folder:
     database = ycm_core.CompilationDatabase(compilation_database_folder)
