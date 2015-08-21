@@ -33,9 +33,8 @@ flags = [
     '-isystem',
     '/usr/include',
     '-isystem',
-    '/home/littlekey/android-ndk-r10d/sources/cxx-stl/system/include',
-    '-isystem',
-    '/home/littlekey/android-ndk-r10d/sources/android/support/include',
+    '/usr/local/include/SDL2',
+    '/Library/Frameworks/SDL2_image.framework/Versions/A/Headers',
     ]
 
 if compilation_database_folder:
