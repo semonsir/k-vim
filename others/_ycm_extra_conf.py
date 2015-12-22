@@ -28,8 +28,6 @@ flags = [
     '.',
     '-isystem',
     '../llvm/include',
-    #'-isystem',
-    #'/usr/lib/gcc/i586-linux-gnu'
     '-isystem',
     '/usr/include',
     '-isystem',
