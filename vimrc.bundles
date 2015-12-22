@@ -134,6 +134,9 @@ Plug 'altercation/vim-colors-solarized'
 " molokai
 " 主题 molokai
 Plug 'tomasr/molokai'
+" tomorrow
+" 主题 tomorrow
+Plug 'chriskempson/vim-tomorrow-theme'
 
 
 " nav
@@ -550,7 +553,7 @@ let g:gitgutter_highlight_lines = 0
 " }}}
 
 " interactive-replace 替换
-Bundle 'hwrod/interactive-replace'
+Plug 'hwrod/interactive-replace'
 " 设置替换功能
 map as<Space> :1,$s/
 map cs<Space> :.s/
@@ -603,7 +606,7 @@ map ns<Space> :.,$s/
     au Syntax * RainbowParenthesesLoadBraces
 
 " 代码排版缩进标识
-Bundle 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 let g:indentLine_noConcealCursor = 1
 let g:indentLine_color_term = 0
 let g:indentLine_char = '¦'
