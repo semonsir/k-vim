@@ -554,8 +554,8 @@ let g:ycm_confirm_extra_conf = 1
     let g:ctrlsf_mapping = {
         \ "open"  : "<Space>",
         \ "openb" : "O",
-        \ "tab"   : "t",
-        \ "tabb"  : "T",
+        \ "tab"   : "<C-t>",
+        \ "tabb"  : "<C-T>",
         \ "prevw" : "p",
         \ "quit"  : "q",
         \ "next"  : "<C-J>",

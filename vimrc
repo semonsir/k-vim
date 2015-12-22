@@ -571,8 +571,8 @@ nnoremap <C-y> 2<C-y>
 
 " Jump to start and end of line using the home row keys
 " 增强tab操作, 导致这个会有问题, 考虑换键
-nmap n o<ESC>k
-nmap N O<ESC>j
+nmap t o<ESC>k
+nmap T O<ESC>j
 
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
