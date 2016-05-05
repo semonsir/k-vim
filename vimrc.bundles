@@ -262,6 +262,17 @@ if count(g:bundle_groups, 'qml')
   Plug 'peterhoeg/vim-qml'
 endif
 
+if count(g:bundle_groups, 'java')
+  " ##### java complete #####
+  Plug 'artur-shaik/vim-javacomplete2'
+
+  autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+  nmap <F1> <Plug>(JavaComplete-Imports-RemoveUnused)
+  imap <F1> <Plug>(JavaComplete-Imports-AddMissing)
+
+endif
+
 " this is just for beta version
 if count(g:bundle_groups, 'beta')
     " indent
