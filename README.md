@@ -332,12 +332,6 @@ thx a lot. 可以给我提pull request:)
 
 如果你认为对你有所帮助, You can Buy me a coffee:)
 
-
-![donation](https://raw.githubusercontent.com/wklken/gallery/master/donation/donation_w.jpg)
-
-
-支付宝
-
 ![donation](https://raw.githubusercontent.com/wklken/gallery/master/donation/donation.png)
 
 ------------------------
@@ -361,19 +355,6 @@ Blog: [http://www.wklken.me](http://www.wklken.me)
 
 Modify By LittleKey
 ===================
-
-### 缩进设置
-
-    default 默认(所有文件)使用四个空格缩进
-    ruby    使用两个空格缩进
-    vimrc   使用两个空格缩进
-    python  使用四个空格缩进
-
-## 自定义快捷键
-
-> F1~F6 的设置请查看上面的介绍,或直接阅读vimrc
-
-> \<Leader\> 映射为','逗号
 
 ### 缩进设置
 

@@ -160,7 +160,6 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
 
-
 " 设置文内智能搜索提示
 " 高亮search命中的文本
 set hlsearch
@@ -321,7 +320,6 @@ set wildignore=*.o,*~,*.pyc,*.class
 
 " 离开插入模式后自动关闭预览窗口
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
 " 回车即选中当前项
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
 
@@ -566,8 +564,8 @@ nnoremap <C-y> 2<C-y>
 
 " Jump to start and end of line using the home row keys
 " 增强tab操作, 导致这个会有问题, 考虑换键
-nmap n o<ESC>k
-nmap N O<ESC>j
+nmap t o<ESC>k
+nmap T O<ESC>j
 
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
@@ -727,7 +725,4 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
-
-
-
 
