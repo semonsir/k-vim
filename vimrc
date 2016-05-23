@@ -590,8 +590,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " 具体编辑文件类型的一般设置，比如不要 tab 等
 autocmd FileType python :call TAB(4)
-autocmd FileType ruby,javascript,html,css,xml :call TAB(2)
-autocmd FileType python,ruby,javascript,html,css,xml set expandtab ai
+autocmd FileType ruby,javascript,html,css,xml,go :call TAB(2)
+autocmd FileType python,ruby,javascript,html,css,xml,go set expandtab ai
 autocmd BufRead,BufNewFile *.md,*.mkd,*.markdown set filetype=markdown.mkd
 autocmd BufRead,BufNewFile *.part set filetype=html
 " disable showmatch when use > in php
