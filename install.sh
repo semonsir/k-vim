@@ -4,8 +4,8 @@
 BASEDIR=$(dirname $0)
 cd $BASEDIR
 CURRENT_DIR=`pwd`
-YCM_DIR = $CURRENT_DIR/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm
-YCM_CONF_FILE_NAME = ycm_extra_conf
+YCM_DIR=$CURRENT_DIR/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm
+YCM_CONF_FILE_NAME=ycm_extra_conf
 
 lnif() {
     if [ -e "$1" ]; then
@@ -39,7 +39,7 @@ echo "If error,you need to compile it yourself"
 echo "cd $CURRENT_DIR/bundle/YouCompleteMe/ && python install.py --clang-completer --gocode-completer"
 cd $CURRENT_DIR/bundle/YouCompleteMe/
 git submodule update --init --recursive
-python install.py --clang-completer --gocode-completer
+python install.py --clang-completer
 # link YCM config file
 if [ -e $YCM_DIR/.ycm_extra_conf.py ]; then
     mv $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py $YCM_DIR/\.$YCM_CONF_FILE_NAME\.py\.bak
